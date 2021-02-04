@@ -151,33 +151,7 @@ namespace KCSystem.Web
             {
                 Authorization = new[] { new HangfireAuthorizationFilter() }
             });
-            //RecurringJob.AddOrUpdate<AssetVerificationAutoSearch>("AssetVerificationAutoSearch", a =>
-            //        a.Execute(0)
-            //    , Cron.Daily);
-            //RecurringJob.AddOrUpdate<ExcuteinfoReptileAutoSearch>("ExcuteinfoReptileAutoSearch", a =>
-            //        a.Execute()
-            //    , Cron.Weekly);
-            //RecurringJob.AddOrUpdate<JudgmentDocumentAutoSearch > ("JudgmentDocumentAutoSearch", a =>
-            //       a.Execute()
-            //   , Cron.Weekly);
-            //RecurringJob.AddOrUpdate<UpdateOverdueDays>("UpdateOverdueDays", a =>
-            //        a.Execute()
-            //    , Cron.Daily);
-            //RecurringJob.AddOrUpdate<LiquidateCaseCheck>("LiquidateCaseCheck", a =>
-            //        a.Check()
-            //    , "0 0 1,13 * * ?", TimeZoneInfo.Local);//每天执行两次，每天1时和13时各执行一次 
-            //RecurringJob.AddOrUpdate<InsertRepaymentMessage>("InsertRepaymentMessage", a =>
-            //        a.Execute()
-            //    , "0 24 2 24 * ?");
-            //RecurringJob.AddOrUpdate<PersonnelNotice>("PersonnelNotice", a =>
-            //        a.Execute()
-            //    , Cron.Daily);
-            //RecurringJob.AddOrUpdate<BidInfoAutoSearch>("BidInfoAutoSearch", a =>
-            //        a.Execute()
-            //    , Cron.Daily,TimeZoneInfo.Local);
-            //RecurringJob.AddOrUpdate<StandardActionCheck>("StandardActionCheck", a =>
-            //       a.Execute()
-            //   , "0 15 1 L * ?");//每月最后一天执行1:15执行
+            
         }
     }
 }
