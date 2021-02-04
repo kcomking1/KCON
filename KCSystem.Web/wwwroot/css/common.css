@@ -1,0 +1,52 @@
+﻿#toobar {
+    margin: 40px 0 20px;
+}
+
+#toobar .toobar-txt {
+    float: left;
+    font-size: 15px;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+}
+
+#toobar .toobar-btn {
+    float: right;
+}
+
+.toobar-btn button {
+    padding: 8px 10px !important;
+    background: #D7FAF8;
+    color: #09958d;
+    margin-right: 20px;
+    border-radius: 6px !important;
+}
+
+.toobar-btn button:hover {
+    background: #09958d !important;
+    color: #fff;
+}
+
+.toobar-btn button:last-child {
+    margin-right: 0px;
+}
+
+.toobar-btn button span.glyphicon {
+    color: #09958d;
+}
+
+.toobar-btn button:hover span.glyphicon {
+    color: #fff !important;
+}
+
+.layui-layer-iframe .layui-layer-btn, .layui-layer-page .layui-layer-btn {
+    text-align: center;
+}
+/*去除表格border*/
+.bootstrap-table .fixed-table-container.fixed-height .fixed-table-border {
+    border-left: 0;
+    border-right: 0;
+}
+.bootstrap-table .fixed-table-container.fixed-height .table thead th {
+    border-bottom: 0;
+}

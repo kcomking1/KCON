@@ -1,0 +1,229 @@
+﻿/*立案申请*/
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.clearfix:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0;
+}
+
+.clearfix {
+    zoom: 1;
+}
+ul li {
+    list-style: none;
+}
+
+a:focus {
+    text-decoration: none;
+}
+
+label {
+    font-weight: initial;
+}
+.build-content {
+    margin: 0 15px;
+}
+
+.build-title{
+    font-size: 22px;
+    font-weight: 600;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px;
+}
+.build_steps .ant-steps-item-icon .ant-steps-icon {
+    top: -10px !important;
+    left: -10px;
+}
+.build_steps .ant-steps-item-icon, .build_steps .ant-steps-item-process {
+    height: 20px !important;
+}
+.steping_build {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #fff;
+    border: 2px solid #1890ff;
+    color: #1890ff;
+    line-height: 26px;
+}
+.step_build {
+    background-color: #ddd;
+}
+
+.step_build {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    color: #fff;
+    border: 2px solid transparent;
+    line-height: 26px;
+}
+.ant-steps-item:last-child .ant-steps-item-tail, .ant-steps-item:last-child .ant-steps-item-title:after {
+    display: none;
+}
+.build_steps .ant-steps-item-content {
+    min-height: 60px !important;
+}
+/*.ant-steps-item-title{
+    margin-top:6px;
+}*/
+.addspan_build {
+    height: 40px;
+    display: inline-block;
+    overflow: hidden;
+}
+.addicon_build {
+    font-size: 24px;
+    margin: 8px 8px 0 0;
+}
+.anticon svg {
+    display: inline-block;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+.ant-steps-item-finish > .ant-steps-item-tail:after {
+    background-color: #1890ff;
+}
+
+
+.steped_active {
+    background-color: #1890ff;
+    color:#fff;
+}
+/*第二部分*/
+.titleDetail {
+    position: relative;
+    margin-left: 10px;
+    font-weight: 600;
+    padding: 0 10px 10px;
+}
+.titleDetail:before {
+    content: " ";
+    position: absolute;
+    display: inline-block;
+    height: 14px;
+    border-left: 4px solid #62a8ea;
+    top: 4px;
+    left: 0;
+}
+.descriptionList_build .ant-row {
+    margin-bottom: -16px;
+    overflow: hidden;
+}
+.descriptionList_build .description_list {
+    min-height: 38px;
+}
+.descriptionList_build .term_left {
+    line-height: 22px;
+    padding-bottom: 16px;
+    margin-right: 8px;
+    color: rgba(0,0,0,.85);
+    white-space: nowrap;
+    display: table-cell;
+    overflow: hidden;
+    height: 19px;
+    text-align: right;
+    width: 150px;
+}
+.descriptionList_build .detail_right {
+    line-height: 22px;
+    width: 100%;
+    padding-bottom: 16px;
+    color: rgba(0,0,0,.65);
+    display: table-cell;
+}
+.descriptionList_build .term_left:after {
+    content: ":";
+    margin: 0 8px 0 2px;
+    position: relative;
+    top: -.5px;
+}
+.descriptionList_build.small_build .ant-row {
+    margin-bottom: -8px;
+}
+
+.descriptionList_build .ant-row {
+    margin-bottom: -16px;
+    overflow: hidden;
+}
+.descriptionList_build .description_list {
+    min-height: 38px;
+}
+.descriptionList_build.small_build .detail_right, .descriptionList_build.small_build .term_left {
+    padding-bottom: 8px;
+}
+.showimg {
+    max-width: 70px;
+    height: 60px;
+}
+.button___3AodL {
+    display: block;
+    padding-bottom: 20px;
+    background-color: #fff;
+}
+/*第三部分*/
+.addspan {
+    height: 40px;
+    display: inline-block;
+    overflow: hidden;
+}
+.addicon_build {
+    font-size: 24px;
+    margin: 8px 8px 0 0;
+}
+.options-build {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border: 1px solid transparent;
+}
+.choice_default, .choiced_active {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+.choice_default {
+    border-radius: 5px;
+}
+.choiced_active {
+    border-radius: 5px;
+    border: 1px solid #1ba7ff;
+}
+.choiceImg {
+    width: 70px;
+}
+.next-build-content{
+    display:block;
+}
+.tip_build {
+    font-size: 12px;
+    line-height: 1.6;
+    color: red;
+}
+.ant-form-item-label > label.ant-form-item-required:before {
+    display: inline-block;
+    margin-right: 4px;
+    content: "*";
+    font-family: SimSun;
+    line-height: 1;
+    font-size: 14px;
+    color: #f5222d;
+}
+.chioce-content{
+    display:none;
+}
+.btnNum-content{
+    display:inline-block;
+}

@@ -1,0 +1,77 @@
+﻿@using KCSystem.Web.Extensions
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>列表</title> 
+    <!--jQuery-->
+    <script src="@Url.Content("~/Scripts/vendor/jQuery/jquery-2.2.3.min.js")"></script>
+    @* <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ant-design-vue@1.3.8/dist/antd.min.css">*@
+    <!--bootstrap-->
+    <link href="@Url.Content("~/Scripts/vendor/bootstrap/css/bootstrap.min.css")" rel="stylesheet">
+    <script src="@Url.Content("~/Scripts/vendor/bootstrap/js/bootstrap.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/vendor/bootstrap/js/bootstrap-BtnBuilder.js")"></script>
+
+    <!--bootstrap-table-->
+    @*<link href="@Url.Content("~/Scripts/vendor/bootstrap-table/bootstrap-table.min.css")" rel="stylesheet">
+        <script src="@Url.Content("~/Scripts/vendor/bootstrap-table/bootstrap-table.min.js")"></script>*@
+
+    <link href="@Url.Content("~/Scripts/vendor/datatables/bootstrap-table.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Scripts/vendor/datatables/extensions/fixed-columns/bootstrap-table-fixed-columns.min.css")" rel="stylesheet" />
+    <script src="@Url.Content("~/Scripts/vendor/datatables/bootstrap-table.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/vendor/datatables/extensions/fixed-columns/bootstrap-table-fixed-columns.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/vendor/datatables/bootstrap-table-zh-CN.min.js")"></script>
+
+    <!--bootstrap-select-->
+    <link href="~/Scripts/vendor/select2/select2.css" rel="stylesheet" />
+    <script src="~/Scripts/vendor/select2/select2.js"></script>
+    <script src="~/Scripts/vendor/select2/i18n/zh-CN.js"></script>
+
+    <!--bootstrap-validator-->
+    <script src="@Url.Content("~/Scripts/vendor/bootstrap-validator/validator.min.js")"></script>
+
+    <!--bootstrap-datetimepicker-->
+    <link href="@Url.Content("~/Scripts/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css")" rel="stylesheet">
+    <script src="@Url.Content("~/Scripts/vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/vendor/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js")"></script>
+
+    <!--layer-->
+    <script src="@Url.Content("~/Scripts/vendor/layer/layer.js")"></script>
+    <script src="@Url.Content("~/Scripts/vendor/layer/layer-extends.js")"></script>
+    <!--fx-->
+    <link href="@Url.Content("~/css/fx/fx-list.css")" rel="stylesheet" />
+    <script src="@Url.Content("~/Scripts/util/util.js")"></script>
+    <link rel="stylesheet" href="~/Scripts/vendor/adminlte/dist/css/AdminLTE.css">
+    <link rel="stylesheet" href="~/Scripts/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link href="~/css/layoutList.css" rel="stylesheet" />
+
+</head>
+<body>
+
+
+    @RenderBody()
+    <script type="text/javascript">
+        var rootUrl = '@Url.Content("~/")';
+        var toolbarHeight = $("#toobar").outerHeight() || 0;
+        
+        var tableHeight = window.parent.App.getFrameHeight() -
+            ($("#searchForm").outerHeight() + 5 + (toolbarHeight === 0 ? 0 : toolbarHeight +45) + 45) - 10;
+        $(function () {
+            $("#btnSearch").on('click',
+                function () {
+                    $table.bootstrapTable('refresh', { silent: true,pageNumber: 1 }); 
+                });
+            $("#btnReflash").on('click',
+                function() {
+                    $table.bootstrapTable('refresh');
+                });
+            //清空
+            //$("#btnReset").click(function () {
+            //    $('#searchForm')[0].reset();
+            //});
+        }); 
+    </script>
+</body>
+</html>

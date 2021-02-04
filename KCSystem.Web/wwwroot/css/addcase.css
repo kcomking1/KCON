@@ -1,0 +1,54 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+.Article{
+    margin: 0 auto;
+    position: relative;
+    padding-top:53px;
+}
+
+.Article-title{
+    width: 112px;
+    height: 48px;
+    margin: 0 auto;
+    text-align: center;
+}
+.Article-title-nav{
+    height: 48px;
+    font-size:16px;
+    text-align: center;
+    line-height: 48px;
+    font-weight:400;
+    color:#050505;
+  }
+  .step{
+    width: 300px;
+    margin:20px auto 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .next{
+    width:100px;
+    height:56px;
+    background:rgba(36,214,137,1);
+    border:3px solid rgba(36,214,137,1);
+    font-size:16px;
+    font-family:Microsoft YaHei;
+    text-align: center;
+    line-height: 56px;
+    font-weight:bold;
+    color:#fff;
+  }
+  .last{
+    width:100px;
+    height:56px;
+    background:red;
+    border:3px solid red;
+    font-size:16px;
+    font-family:Microsoft YaHei;
+    text-align: center;
+    line-height: 56px;
+    font-weight:bold;
+    color:#fff;
+  }

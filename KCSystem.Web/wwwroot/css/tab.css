@@ -1,0 +1,97 @@
+﻿/*tab导航*/
+.content-tabs {
+    margin: 30px 30px 20px;
+    background: #ffffff;
+    border-radius: 4px;
+    border: 0;
+    box-shadow: -4px 0px 10px 2px rgba(50,108,251,0.05);
+    overflow: hidden;
+}
+
+.content-tabs .page-tabs a.active {
+    /*background: #d7faf8;*/
+    background: transparent;
+    border-right: 0;
+    color: #09958d !important;
+    font-weight: bold;
+}
+
+.content-tabs .page-tabs a {
+    color: #475059;
+   /*background: #F2F2F2;*/
+}
+
+/*.content-tabs nav.page-tabs {
+    margin-left: 20px;
+}*/
+
+.content-tabs .page-tabs a.active i:hover {
+    color: #09958d !important;
+}
+
+.main-footer {
+    padding: 9px 15px;
+}
+.content-iframe {
+    margin: 0 30px 0px 30px;
+}
+#content-wrapper {
+    background: #F4F7FC !important
+}
+.skin-blue .sidebar-menu .treeview-menu > li > a {
+    padding-left: 40px !important;
+}
+.content-tabs nav.page-tabs {
+    height: 42px;
+    line-height: 42px;
+}
+.content-tabs .page-tabs a i:hover {
+    color: #09958d !important;
+}
+/*.content-tabs .page-tabs a:hover {
+    background: #d7faf8;
+    color: #09958d !important;
+    font-weight: bold;
+}*/
+.content-tabs .page-tabs span.page_tab_title {
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    background: #F2F2F2;
+    padding: 0 5px 0 15px;
+    border-radius: 4px;
+}
+.content-tabs .page-tabs span.page_tab_title:first-child {
+    padding: 0 15px;
+    border-radius: 4px;
+}
+.content-tabs .page-tabs a.active .page_tab_title {
+    background: #d7faf8;
+}
+.content-tabs .page-tabs a {
+    padding: 0 15px 0 0;
+}
+.content-tabs .page-tabs a i {
+    display: inline-block;
+    background: #F2F2F2;
+    line-height: 28px;
+    padding-right: 15px;
+    margin-left: -10px;
+    border-radius: 4px;
+}
+.content-tabs .page-tabs a.active i {
+    background: #d7faf8;
+    line-height: 28px;
+    padding-right: 15px;
+}
+.content-tabs .page-tabs a:hover span{
+    background: #d7faf8;
+    color: #09958d !important;
+    font-weight: bold;
+}
+.content-tabs .page-tabs a:hover i {
+    background: #d7faf8;
+}
+.content-tabs .page-tabs a:first-child {
+    padding-left: 15px;
+}

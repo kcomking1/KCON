@@ -1,0 +1,503 @@
+﻿ 
+@using KCSystem.Web.Extensions
+@{
+    
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>资管系统</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="@Url.Content("~/Scripts/vendor/bootstrap/css/bootstrap.min.css")">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="@Url.Content("~/Scripts/vendor/adminlte/dist/css/font-awesome.min.css")">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="@Url.Content("~/Scripts/vendor/adminlte/dist/css/ionicons.min.css")">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="@Url.Content("~/Scripts/vendor/adminlte/dist/css/AdminLTE.min.css")">
+    <link href="~/Scripts/vendor/toastr/toastr.min.css" rel="stylesheet" />
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+    folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="~/Scripts/vendor/adminlte/dist/css/skins/all-skins.min.css">
+    <link href="~/css/index.css" rel="stylesheet" />
+  
+    <!--水印-->
+    <script src="@Url.Content("~/Scripts/watermark.js")"></script>
+    <style type="text/css">
+
+        html {
+            overflow: hidden;
+        }
+    </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="~/Scripts/vendor/ie9/html5shiv.min.js"></script>
+        <script src="~/Scripts/vendor/ie9/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini fixed">
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini">logo</span>
+
+                @*<span class="logo-lg"><b>资管系统</b></span>*@
+                <span class="logo-lg index-logo">logo</span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top index-navbar">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <li onclick="GotoHome()">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-home"></i>
+                            </a>
+                        </li>
+                        <li class="dropdown messages-menu ">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                <i class="fa fa-envelope-o"></i>
+                                <span class="label label-success">4</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">You have 4 messages</li>
+                                <li>
+                                    <!-- inner menu: contains the actual data -->
+                                    <ul class="menu">
+                                        <li>
+                                            <!-- start message -->
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="~/Scripts/vendor/adminlte/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                                </div>
+                                                <h4>
+                                                    Support Team
+                                                    <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <!-- end message -->
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="~/Scripts/vendor/adminlte/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                                </div>
+                                                <h4>
+                                                    AdminLTE Design Team
+                                                    <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="~/Scripts/vendor/adminlte/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                                </div>
+                                                <h4>
+                                                    Developers
+                                                    <small><i class="fa fa-clock-o"></i> Today</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="~/Scripts/vendor/adminlte/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                                </div>
+                                                <h4>
+                                                    Sales Department
+                                                    <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="~/Scripts/vendor/adminlte/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                                </div>
+                                                <h4>
+                                                    Reviewers
+                                                    <small><i class="fa fa-clock-o"></i> 2 days</small>
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="footer"><a href="#">See All Messages</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown  notifications-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-bell-o "></i><span class="label label-warning" id="msgCount">10</span>
+                            </a>
+                            <ul class="dropdown-menu ">
+                                <li class="header">You have 10 notifications</li>
+                                <li>
+                                    <!-- inner menu: contains the actual data -->
+                                    <ul class="menu">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
+                                                page and may cause design problems
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-users text-red"></i> 5 new members joined
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-shopping-cart text-green"></i> 25 sales made
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-user text-light-blue"></i> You changed your username
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="footer"><a href="#">View all</a></li>
+
+                            </ul>
+                        </li>
+                        <!-- User Account: style can be found in dropdown.less -->
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="height: 50px" id="UserName">
+                                <img src="~/Scripts/vendor/adminlte/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                                <span class="hidden-xs">@User.Identity.Name</span>
+                                @*<span style="padding-left:6px;">已认证</span>*@
+                            </a>
+                            <ul class="dropdown-menu user-ul">
+
+                                <li>
+                                    <div id="changePwd"><i class="fa fa-user"></i>  修改密码</div>
+                                </li>
+                                <li>
+                                    <div id="logout"><i class="fa fa-sign-out"></i>  退出登录</div>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <!-- Control Sidebar Toggle Button -->
+                        @*<li>
+                            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                        </li>*@
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- Sidebar user panel -->
+                <div class="user-panel" style="height: 45px;">
+                    <div class=" info" style="text-align: center; left: 0px;">
+                        <p>当前角色：@User.ExtractUserRoleName()</p>
+                    </div>
+                </div>
+                <!-- search form -->
+                <form action="#" method="get" class="sidebar-form" onsubmit="return false">
+                    <div class="input-group">
+                        <input type="text" name="q" autocomplete="false" class="form-control">
+                        <span class="input-group-btn">
+                            <button type="button" name="search" id="search-btn" class="btn btn-flat" onclick="search_menu()">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+                <!-- /.search form -->
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu"></ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" id="content-wrapper" style="border-left:0">
+            <!--bootstrap tab风格 多标签页-->
+            <div class="content-tabs">
+                <button class="roll-nav roll-left tabLeft" onclick="scrollTabLeft()">
+                    <i class="fa fa-backward"></i>
+                </button>
+                <nav class="page-tabs menuTabs tab-ui-menu" id="tab-menu">
+                    <div class="page-tabs-content" style="margin-left: 0px;">
+                    </div>
+                </nav>
+                <button class="roll-nav roll-right tabRight" onclick="scrollTabRight()">
+                    <i class="fa fa-forward" style="margin-left: 3px;"></i>
+                </button>
+                <div class="btn-group roll-nav roll-right">
+                    <button class="dropdown tabClose" data-toggle="dropdown">
+                        页签操作<i class="fa fa-caret-down" style="padding-left: 3px;"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right" style="min-width: 128px;">
+                        <li><a class="tabReload" href="javascript:refreshTab();">刷新当前</a></li>
+                        <li><a class="tabCloseCurrent" href="javascript:closeCurrentTab();">关闭当前</a></li>
+                        <li><a class="tabCloseAll" href="javascript:closeOtherTabs(true);">全部关闭</a></li>
+                        <li><a class="tabCloseOther" href="javascript:closeOtherTabs();">除此之外全部关闭</a></li>
+                    </ul>
+                </div>
+                <button class="roll-nav roll-right fullscreen" onclick="App.handleFullScreen()">
+                    <i class="fa fa-arrows-alt"></i>
+                </button>
+            </div>
+            <div class="content-iframe " style="background-color: #f4f7fc;border-left:0">
+                <div class="tab-content " id="tab-content">
+                </div>
+            </div>
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 1.0.0.1
+            </div>
+            <strong>Copyright &copy; 2018-2019 KCSystem.</strong> All rights
+            reserved.
+        </footer>
+        
+    </div>
+    <!-- ./wrapper -->
+    <!-- jQuery 2.2.3 -->
+    <script src="@Url.Content("~/Scripts/vendor/jQuery/jquery-2.2.3.min.js")"></script>
+    <!-- Bootstrap 3.3.6 -->
+    <script src="@Url.Content("~/Scripts/vendor/bootstrap/js/bootstrap.min.js")"></script>
+    <!-- Slimscroll -->
+    @*<script src="@Url.Content("~/Scripts/vendor/slimScroll/jquery.slimscroll.min.js")"></script>*@
+    <!-- FastClick -->
+    <script src="@Url.Content("~/Scripts/vendor/fastclick/fastclick.js")"></script>
+    <!-- AdminLTE App -->
+    <script src="@Url.Content("~/Scripts/vendor/adminlte/dist/js/app.js")"></script>
+    <!-- AdminLTE for demo purposes -->
+    @*<script src="@Url.Content("~/Scripts/vendor/adminlte/dist/js/demo.js")"></script>*@
+    <!--tabs-->
+    <script src="@Url.Content("~/Scripts/vendor/adminlte/dist/js/app_iframe.js")"></script>
+
+    <!--layer-->
+    <script src="@Url.Content("~/Scripts/vendor/layer/layer.js")"></script>
+    <script src="@Url.Content("~/Scripts/vendor/layer/layer-extends.js")"></script>
+    <script src="~/Scripts/vendor/toastr/toastr.min.js"></script>
+    <!--fx-->
+    @*<script src="@Url.Content("~/Scripts/util/util.js")"></script>*@
+
+<script type="text/javascript">
+        var rootUrl = '@Url.Content("~/")';
+
+        var menus =@Html.Raw(ViewBag.Menus);
+        /**
+         * 本地搜索菜单
+         */
+        function search_menu() {
+            //要搜索的值
+            var text = $('input[name=q]').val();
+
+            var $ul = $('.sidebar-menu');
+            $ul.find("a.nav-link").each(function () {
+                var $a = $(this).css("border", "");
+
+                //判断是否含有要搜索的字符串
+                if ($a.children("span.menu-text").text().indexOf(text) >= 0) {
+
+                    //如果a标签的父级是隐藏的就展开
+                    $ul = $a.parents("ul");
+
+                    if ($ul.is(":hidden")) {
+                        $a.parents("ul").prev().click();
+                    }
+
+                    //点击该菜单
+                    $a.click().css("border", "1px solid");
+                }
+            });
+        }
+    function GotoCenter() {
+        addTabs({
+            id: '324708b9-5027-4fd0-a9eb-a101d214ca72',
+            title: '个人中心',
+            close: true,
+            url: '@Url.Action("HomeIndex")'
+        });
+    }
+
+    function GotoHome() {
+        addTabs({
+            id: '324708b9-5027-4fd0-a9eb-a001d214ca72',
+            title: '首页',
+            close: false,
+            url: '@Url.Action("HomeIndex")'
+        });
+    }
+
+
+    $(".notifications-menu").hover(function () {
+        $(".notifications-ul").stop(true).slideDown();
+    }, function () {
+        $(".notifications-ul").stop(true).slideUp();
+    });
+    $(".user-menu").hover(function () {
+        $(".user-ul").stop(true).slideDown();
+    }, function () {
+        $(".user-ul").stop(true).slideUp();
+    });
+
+    $(function () {
+        //更改密码
+        $('#changePwd').click(function () {
+
+
+            layer.open({
+                type: 2,
+                title: '更改密码',
+                area: ['700px', '400px'],
+                shadeClose: false,
+                shade: 0.8,
+                content: rootUrl + 'Home/ChangePassword'
+
+            });
+        });
+
+        //注销
+        $('#logout').click(function () {
+            dialogComfirm('确认要注销吗？', function () {
+                $.post(rootUrl + 'signout', {}).always(function () {
+
+                    top.location.href = rootUrl + 'signin';
+
+                });
+            });
+        });
+
+        App.setbasePath("/Scripts/vendor/adminlte/");
+        App.setGlobalImgPath("dist/img/");
+
+        GotoHome();
+
+        App.fixIframeCotent();
+        $('.sidebar-menu').sidebarMenu({ data: menus });
+
+        ////tab切换第一层
+        //$(".sidebar-menu>li.treeview").click(function () {
+        //    var $that = $(this);
+        //    $that.addClass("active").siblings().removeClass("active");
+        //    $(".sidebar-menu .treeview-menu>li").removeClass("current");
+        //    $that.find("ul").addClass("menu-open").parent().siblings().find("ul").css("display", "none");
+        //});
+
+        ////第二层
+        //$(".sidebar-menu .treeview-menu>li").click(function () {
+        //    var $this = $(this);
+        //    $(".treeview-menu>li").each(function () {
+        //        if ($(this).hasClass("current")) {
+        //            $(this).removeClass("current");
+        //        }
+        //    });
+        //    $this.addClass("current").siblings().removeClass("current");
+        //    //$(this).parent().parent().removeClass('active');
+        //});
+        ////  阻止事件冒泡
+        //$(".sidebar-menu >li.treeview >ul").bind("click", function (event) {
+        //    event.stopPropagation();
+        //});
+
+
+        //initTable();
+
+        //var tip_index = 0;
+        //$(".notifications-ul").on("mouseover", "li", function () {
+        //    var spanlen = $(this).find("a").length;
+        //    if (spanlen > 0) { //判断文本是否超出
+        //        var content = $(this).find("a").attr("data-title"); //获取文案
+        //        if (content != undefined && content.length > 6) {
+        //            let arr = [];
+        //            content.split('\n').forEach(item => arr.push(`${item.trim()}`));
+        //            content = arr.join('<br>');
+        //            if (content) {
+        //                tip_index = layer.tips(content, this, { time: 0, tips: [3, '#999999'], area: ['400px', 'auto'] });
+        //            }
+        //        }
+        //    }
+        //});
+        //$(".notifications-ul").on("mouseleave", "li", function () {
+        //    layer.close(tip_index);
+        //});
+    });
+
+    //初始化表格
+    function initTable() {
+        var pages = {
+            "limit": 10,
+            "offset": 0,
+            "order": "asc"
+        };
+        $.ajax({
+            type: "post",
+            url: '@Url.Action("MessageList")',
+            contentType: "application/json",
+            data: JSON.stringify(pages),
+            async: false,
+            success: function (res) {
+                if (res.total > 0) {
+                    var html = "";
+                    var row = res.rows;
+                    for (var i = 0; i < row.length; i++) {
+                        html += ` <li><a href="javascript: void (0)" onclick="SeeMessage('${row[i].id}', '${row[i].module}'); return false;" data-title='${row[i].sendContent}'>${row[i].sendContent}</a></li>`;
+                    }
+                    $(".notifications-ul").html(html);
+                    $("#msgCount").html(res.total);
+                } else {
+                    $("#msgCount").html(res.total);
+                    $(".notifications-ul").html("<li>暂无消息</li>");
+                }
+            },
+            error: function (err) {
+                $(".notifications-ul").html("<li>暂无消息</li>");
+            }
+        });
+    }
+
+    function SeeMessage(id, module) {
+        $.get('@Url.Action("SeeMessage")',
+            { id: id },
+            function (resJson) {
+                if (resJson.success) {
+                    initTable();
+                    $(`.${module}`).trigger("click");
+                } else {
+                    dialogError(resJson.msg);
+                }
+            }
+        );
+    }
+    var openWater = "@ViewBag.OpenWater";
+    if (openWater == "0") {
+        watermark.load({ watermark_txt: $("#UserName").text() });
+    }
+</script>
+</body>
+</html>

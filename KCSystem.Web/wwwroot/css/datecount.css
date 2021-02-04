@@ -1,0 +1,69 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+ul li {
+    list-style: none;
+}
+
+a:focus {
+    text-decoration: none;
+}
+
+label {
+    font-weight: initial;
+}
+.content_datecount {
+    margin: 0 15px;
+}
+.title_datecount {
+    font-size: 22px;
+    font-weight: 600;
+    background-color: #d7d7d7;
+    color: #fff;
+    padding: 0 15px;
+    line-height: 40px;
+    margin: 0 0 30px;
+}
+.ant-table-small > .ant-table-content > .ant-table-body {
+    margin: 0 !important;
+}
+.ant-table-thead tr th {
+    font-weight: 600 !important;
+    background-color: #f8f8f8 !important;
+}
+
+.alignCenter{
+    text-align: center !important;
+}
+.datacount-select{
+    margin-right:24px;
+}
+.datacount-select .btn {
+    padding: 2px 12px !important;
+}
+#main {
+    width: 100%;
+    height: 400px;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    position: relative;
+    margin-top:3%;
+}
+#barsDemo{
+    width:100%;
+    height:400px;
+}

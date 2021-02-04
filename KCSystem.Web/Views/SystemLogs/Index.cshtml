@@ -1,0 +1,97 @@
+﻿@{
+    ViewBag.Title = "操作日志";
+    Layout = "_Layout_List";
+}  
+ 
+<div class="fx-content"> 
+    <div class="fx-wrapper">
+        <form class="form-inline" id="searchForm">
+            <div class="form-group">
+                <input type="text" class="form-control input-sm" name="keyword" placeholder="操作账号">
+
+            </div>
+            <div class="form-group">
+                <label>时间</label>
+                <input id="StartDate" name="StartDate" type="text" data-date-format="yyyy-mm-dd" style="width: 100px" class="  form-control input-sm  ">
+                -
+                <input id="EndDate" name="EndDate" type="text" data-date-format="yyyy-mm-dd" style="width:100px" class="  form-control input-sm">
+            </div>
+
+            <div class="form-group">
+                <button type="button" class="btn btn-primary btn-sm" id="btnSearch">
+                    @*<i class="glyphicon glyphicon-search"></i>*@
+                    查询
+                </button>
+                <button type="button" class="btn btn-danger btn-sm" id="btnReflash">
+                    @*<span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>*@
+                    刷新
+                </button>
+            </div> 
+        </form>
+    </div>
+    <div class="fx-wrapper">
+        <table id="dataTable" class="table-bordered"></table>
+    </div> 
+</div>
+
+<script>
+    let $table = $('#dataTable');
+    
+    $(function () { 
+        $('#StartDate').datetimepicker({
+            language: 'zh-CN',
+            minView: 2//日期选择
+        });
+        $('#EndDate').datetimepicker({
+            language: 'zh-CN',
+            minView: 2//日期选择
+        });  
+       initTable();
+       
+    });
+    
+    //初始化表格
+    function initTable() { 
+        $table.bootstrapTable({
+            url: '@Url.Action("SystemLogs")',
+            idField: 'id',
+            pagination: true,
+            method: 'post',
+            height: tableHeight, ,
+            clickToSelect: false,
+            sidePagination: "server",
+            detailView: false, //父子表
+            pageNumber: 1,
+            pageSize: 50,
+            pageList: [50, 100],
+            columns: [
+                {
+                    title: '编号',
+                    field: 'id',
+                    width: '50px'
+                },
+                { title: '操作账号', field: 'phone', width: '250px' },
+                { title: '操作场景', field: 'scenarios', width: '250px' },
+                {
+                    title: '操作对象',
+                    field: 'description'
+                },
+                {
+                    title: '操作时间',
+                    field: 'addTime',
+                    width: '150px',
+                    formatter: function(value, row) {
+                        return new Date(value).format("yyyy-MM-dd");
+                    }
+                }
+            ],
+            queryParams: function(params) {
+                var searchParams = $('#searchForm').getValues();
+                $.extend(params, searchParams);
+
+                return params;
+            }
+        });
+    } 
+</script>
+

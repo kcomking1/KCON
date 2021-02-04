@@ -1,0 +1,59 @@
+﻿#app, #appCase {
+    padding: 30px 45px 15px 20px;
+}
+/*添加案件css*/
+/*tab切换案件添加*/
+.nav-tabs-custom {
+    box-shadow: 0 0px 0px transparent !important;
+}
+.nav-tabs-custom > .nav-tabs {
+    background: #f7f7f7;
+}
+
+.nav-tabs-custom > .nav-tabs > li {
+    border-top: 0 !important;
+}
+
+.nav-tabs-custom > .nav-tabs > li.active > a, .nav-tabs-custom > .nav-tabs > li.active:hover > a {
+    background-color: #D7FAF8;
+    color: #09958d;
+    font-weight: bold;
+}
+.nav-tabs-custom > .nav-tabs {
+    /*box-shadow: 0px 4px 10px 2px rgba(50,108,251,0.1);*/
+    margin-bottom: 20px;
+}
+.nav-tabs-custom > .tab-content {
+    padding: 20px !important;
+    box-shadow: 0px 4px 10px 2px rgba(50,108,251,0.1);
+}
+.input-group .input-group-addon {
+    border: 0 !important;
+}
+.btn-info {
+    background-color: #09958D !important;
+    border-color: #09958D !important;
+}
+.btn-info:hover, .btn-info:active, .btn-info.hover {
+    opacity: .9;
+}
+#appCase .input-group-addon{padding:6px 2px !important }
+/*添加房产信息*/
+.estate-info .box.box-default {
+    border-top: 0 !important;
+    border-radius: 0px !important;
+    box-shadow: 0px 4px 10px 2px rgba(50, 108, 251, 0.1) !important;
+}
+.estate-info .box-header.with-border {
+    border-bottom: 0 !important;
+}
+.estate-info .form-group {
+    margin-bottom: 30px;
+}
+.new-add {
+    padding: 30px;
+    box-shadow: 0px 4px 10px 2px rgba(50, 108, 251, 0.1) !important;
+}
+.new-add .form-group {
+    margin-bottom: 30px;
+}

@@ -1,0 +1,57 @@
+﻿/*立项申请*/
+* {
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style:none;
+}
+a:focus{
+    text-decoration:none;
+}
+label{
+    font-weight:initial;
+}
+.content_subcase {
+    margin: 0 15px;
+}
+.title_subcase {
+    font-size: 22px;
+    font-weight: 600;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px;
+}
+@media screen and (min-width: 1200px) {
+    .pro-introduction {
+        width: 20.5% !important;
+    }
+}
+
+@media (min-width: 576px){
+    .sq-people{
+        margin-left:-6%;
+    }
+    .btn-submit{
+        margin-left:22%;
+    }
+}
+@media (min-width: 768px){
+    .btn-submit {
+        margin-left: 43%;
+    }
+} 
+@media (min-width: 992px) {
+    .btn-submit {
+        margin-left: 72%;
+    }
+}
+@media (min-width:1200px) {
+    .sq-people {
+        margin-left: 0%;
+    }
+
+    .btn-submit {
+        margin-left: 50%;
+    }
+}

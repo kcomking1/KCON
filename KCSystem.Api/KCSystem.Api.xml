@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KCSystem.Api</name>
+    </assembly>
+    <members>
+        <member name="T:KCSystem.Api.AuthHelper.CustomJwtBearerOptionsPostConfigureOptions">
+            <summary>
+            JWT Option 设置 添加自定义验证
+            </summary>
+        </member>
+        <member name="M:KCSystem.Api.AuthHelper.CustomJwtBearerOptionsPostConfigureOptions.#ctor(KCSystem.Api.AuthHelper.CustomJwtSecurityTokenHandler)">
+            <summary>
+            CustomJwtBearerOptionsPostConfigureOptions
+            </summary>
+            <param name="tokenValidator">自定义token 验证</param>
+        </member>
+        <member name="M:KCSystem.Api.AuthHelper.CustomJwtBearerOptionsPostConfigureOptions.PostConfigure(System.String,Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions)">
+            <summary>
+            Option修改添加自定义验证
+            </summary>
+            <param name="name"></param>
+            <param name="options"></param>
+        </member>
+        <member name="T:KCSystem.Api.AuthHelper.CustomJwtSecurityTokenHandler">
+            <summary>
+            自定义token验证
+            </summary>
+        </member>
+        <member name="M:KCSystem.Api.AuthHelper.CustomJwtSecurityTokenHandler.#ctor(Microsoft.Extensions.Caching.Memory.IMemoryCache)">
+            <summary>
+            自定义token验证
+            </summary>
+            <param name="cache"></param>
+        </member>
+        <member name="P:KCSystem.Api.AuthHelper.CustomJwtSecurityTokenHandler.CanValidateToken">
+            <summary>
+            验证
+            </summary>
+        </member>
+        <member name="P:KCSystem.Api.AuthHelper.CustomJwtSecurityTokenHandler.MaximumTokenSizeInBytes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:KCSystem.Api.AuthHelper.CustomJwtSecurityTokenHandler.CanReadToken(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="securityToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KCSystem.Api.AuthHelper.CustomJwtSecurityTokenHandler.ValidateToken(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Tokens.SecurityToken@)">
+            <summary>
+            验证token
+            </summary>
+            <param name="securityToken"></param>
+            <param name="validationParameters"></param>
+            <param name="validatedToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KCSystem.Api.Controllers.HomeController.Test">
+            <summary>
+            Test
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KCSystem.Api.Controllers.HomeController.Notice">
+            <summary>
+            Notice
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KCSystem.Api.Controllers.HomeController.GetOperatorMenu">
+            <summary>
+            获取菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KCSystem.Api.Extensions.BirthdayHelper.CalculateAge(System.String)">
+            <summary>
+            根据出生日期，计算精确的年龄
+            </summary>
+            <param name="birthDate">生日</param>
+            <returns></returns>
+        </member>
+        <member name="M:KCSystem.Api.Extensions.BirthdayHelper.DateDiff(System.DateTime,System.DateTime)">
+            <summary>
+            求两个日期时间差
+            </summary>
+            <param name="dateStart"></param>
+            <param name="dateEnd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KCSystem.Api.Extensions.BirthdayHelper.IsDate(System.String)">
+            <summary>
+            判断日期
+            </summary>
+            <param name="DateStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KCSystem.Api.Extensions.BirthdayHelper.TitleToUpper(System.String)">
+            <summary>
+            将字段首字母变为大写
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KCSystem.Api.Extensions.BirthdayAgeSex">
+            <summary>
+            定义 生日年龄性别 实体
+            </summary>
+        </member>
+        <member name="T:KCSystem.Api.Models.PasswordRulesAttribute">
+            <summary>
+            密码规则：必须包含以下各类中的两种：大写字母、小写字母，数字，键盘特殊字符
+            </summary>
+        </member>
+        <member name="T:KCSystem.Api.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:KCSystem.Api.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:KCSystem.Api.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:KCSystem.Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:KCSystem.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,406 @@
+﻿#app, #appCase {
+    padding: 20px !important;
+
+}
+.btn:active {
+    box-shadow: none;
+}
+/*添加案件css*/
+/*tab切换案件添加*/
+.nav-tabs-custom {
+    box-shadow: 0 0px 0px transparent !important;
+}
+.nav-tabs-custom > .nav-tabs {
+    background: #f7f7f7;
+}
+
+.nav-tabs-custom > .nav-tabs > li {
+    border-top: 0 !important;
+}
+
+.nav-tabs-custom > .nav-tabs > li.active > a, .nav-tabs-custom > .nav-tabs > li.active:hover > a {
+    background-color: #D7FAF8;
+    color: #09958d;
+    font-weight: bold;
+}
+.nav-tabs-custom > .nav-tabs {
+    /*box-shadow: 0px 4px 10px 2px rgba(50,108,251,0.1);*/
+    margin-bottom: 20px;
+}
+.nav-tabs-custom > .tab-content {
+    padding: 20px !important;
+    box-shadow: 0px 4px 10px 2px rgba(50,108,251,0.1);
+}
+.input-group .input-group-addon {
+    border: 0 !important;
+}
+.btn-info {
+    background-color: #09958D !important;
+    border-color: #09958D !important;
+}
+.btn-info:hover, .btn-info:active, .btn-info.hover {
+    opacity: .9;
+}
+#appCase .input-group-addon{padding:6px 2px !important }
+/*添加房产信息*/
+.estate-info .box.box-default {
+    border-top: 0 !important;
+    border-radius: 0px !important;
+    box-shadow: 0px 4px 10px 2px rgba(50, 108, 251, 0.1) !important;
+}
+.estate-info .box-header.with-border {
+    border-bottom: 0 !important;
+}
+.estate-info .form-group {
+    margin-bottom: 20px;
+}
+.new-add {
+    padding: 30px;
+    box-shadow: 0px 4px 10px 2px rgba(50, 108, 251, 0.1) !important;
+}
+.new-add .form-group {
+    margin-bottom: 20px;
+}
+/*添加诉讼进度文件按钮*/
+.file {
+    background: #09958D !important;
+    border: 1px solid #09958D !important;
+    color: #fff !important;
+}
+.file:hover {
+    cursor: pointer;
+    opacity: .9;
+}
+#file:hover {
+    cursor: pointer;
+}
+.sure-btn input[type='button'] {
+    border-color: #09958D;
+    background-color: #09958D;
+    color: #fff;
+    padding: 9px 25px;
+}
+.sure-btn input[type='button']:hover {
+    font-weight: bold;
+    opacity: .9;
+}
+.btn-primary.focus, .btn-primary:focus {
+    background-color: #09958D !important;
+    border-color: #09958D !important;
+}
+/*时间空间颜色*/
+
+.datetimepicker table tr td.active, .datetimepicker table tr td.active:hover, .datetimepicker table tr td.active.disabled, .datetimepicker table tr td.active.disabled:hover {
+    background-color: #09958d;
+    background-image: -moz-linear-gradient(top,#23c3ba,#09958d);
+    background-image: -ms-linear-gradient(top,#23c3ba,#09958d);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#23c3ba),to(#09958d));
+    background-image: -webkit-linear-gradient(top,#23c3ba,#09958d);
+    background-image: -o-linear-gradient(to bottom,#23c3ba,#09958d);
+    background-image: linear-gradient(to bottom,#23c3ba,#09958d);
+    border-color: #09958d;
+}
+.layui-layer-btn {
+    text-align: center;
+}
+.btn.focus, .btn:focus, .btn:hover {
+    color: #09958d;
+}
+.pagination-detail .btn-default:hover {
+    color: #f3eaea;
+}
+/*户籍*/
+.reg-picker .city-picker-span {
+    border-radius: 4px;
+    border: 1px solid #d2d6de;
+}
+
+.reg-picker .city-picker-span.focus, .city-picker-span.open {
+        border-bottom-color: #d2d6de;
+    }
+
+.reg-picker .city-select-tab > a.active {
+    color: #09958d;
+}
+
+.reg-picker .city-select a:hover, .city-select a:focus {
+    background-color: #D7FAF8;
+    color: #09958d;
+}
+
+.reg-picker .city-select a.active {
+    background-color: #D7FAF8;
+    color: #09958d;
+}
+/*文件按钮*/
+.file-check {
+    padding: 6px !important;
+    border-bottom-right-radius: 2px !important;
+    border-top-right-radius: 2px !important;
+    margin-left: 0 !important;
+}
+/*添加页面margin-bottom*/
+.add-form .form-group {
+    margin-bottom: 20px;
+}
+.data-type .title, .data-type .data, .data-type .error {
+    overflow: visible;
+}
+.data-type .title.rowHeight2x, .data-type .data.rowHeight2x {
+    height: 129px;
+}
+/*项目委托添加费率输入框*/
+#MinAmount:focus, #MaxAmount:focus, #Rate:focus, #Remark:focus {
+    outline: none;
+}
+.rate-btn {
+    border-color: #09958D;
+    background-color: #09958D;
+    color: #fff;
+}
+
+.rate-btn:hover {
+    outline: none;
+    color: #fff !important;
+}
+
+.rate-btn:focus {
+    color: #fff;
+    outline: none;
+}
+.rate-btn:active:focus {
+    outline: none;
+}
+.content .box {
+    border: 1px solid #f4f4f4;
+}
+/*.table-hover > tbody#FileTable > tr:hover {
+    background-color: #D7FAF8;
+}
+.table-hover > tbody#RateTable > tr:hover {
+    background-color: #D7FAF8;
+}*/
+/*选择文件icon*/
+#searchBtn:active:focus {
+    outline: #09958d auto 5px;
+} 
+/*添加模块*/
+#ModuleUse, #IsMortgage, #IsDeduction, #IsReach, #IsSeizure {
+    margin-top: 10px;
+}
+/*外访*/
+.outVisits-select .select2-dropdown .select2-search__field:focus, .select2-search--inline .select2-search__field:focus {
+    border: 1px solid transparent;
+}
+
+.outVisits-select .select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #09958d;
+    border-color: #09958d;
+}
+
+/*.outVisits-select .select2-container--default.select2-container--focus .select2-selection--multiple {
+    border-radius: 4px !important;
+}*/
+.outVisits-select .select2-container--default .select2-selection--multiple {
+    border-radius: 4px !important;
+}
+.outVisits-select .select2-container--default .select2-selection--multiple:focus {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+.outVisits-select .select2-container--default .select2-selection--multiple .select2-selection__clear {
+        margin-top: 7px;
+    }
+.outVisits-select .select2-dropdown .select2-search__field:focus, .select2-search--inline .select2-search__field:focus {
+    border: 0;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+    padding: 0px 0px;
+    margin-top: 0px;
+}
+.outVisits-select .select2-container .select2-search--inline .select2-search__field {
+    padding: 0px 10px 0 10px;
+    min-height: 24px;
+}
+.outVisits-select .select2-container .select2-selection--multiple {
+    min-height: 34px;
+}
+/*添加btn*/
+.add-btn button, .add-btn a {
+    padding: 8px 24px;
+    background: #D7FAF8;
+    color: #09958d;
+    border-radius: 6px;
+}
+    .add-btn button:hover, .add-btn a:hover {
+        background: #09958d;
+        color: #fff;
+    }
+/*.add-btn button:focus {
+    color: #fff;
+    background: #09958d;
+}*/
+.add-btn button:active:focus{
+    outline: 0px auto -webkit-focus-ring-color !important;
+}
+.defendantEditor {
+    background: #09958d;
+    color: #fff;
+    border-color: #09958d;
+}
+.defendantEditor:hover {
+    background: #09958d;
+    color: #fff;
+    border-color: #09958d;
+}
+.defendantDel:hover {
+    color: #fff;
+    border-color: #ac2925;
+}
+.defendantEditor:active:focus, .defendantDel:active:focus {
+    outline: 0px auto -webkit-focus-ring-color !important;
+}
+.defendantEditor:focus, .defendantDel:focus {
+    color: #fff;
+}
+.defendant-error {
+    display: block;
+}
+.errors {
+    color: red;
+    position: absolute;
+    font-size: 10px;
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-bottom: 0;
+    display: none;
+}
+a.defendantEditor:active {
+    background-color: #09958d;
+    border-color: #09958d;
+}
+a.defendantEditor:active:hover {
+    background-color: #09958d;
+    border-color: #09958d;
+}
+#toobar {
+    margin-bottom: 20px;
+}
+#toobar .toobar-txt {
+    float: left;
+    font-size: 15px;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+}
+#toobar .toobar-btn {
+    float: right;
+}
+.toobar-btn button {
+    padding: 8px 10px !important;
+    background: #D7FAF8;
+    color: #09958d;
+    margin-right: 20px;
+    border-radius: 6px !important;
+}
+.toobar-btn button:hover {
+    background: #09958d !important;
+    color: #fff;
+}
+.toobar-btn button:focus, .toobar-btn button:active:focus {
+    color: #fff;
+    outline: 0px auto -webkit-focus-ring-color !important;
+}
+#ContactDataTable .glyphicon-edit, #ContactDataTable .glyphicon-remove, #PhoneDataTable .glyphicon-edit, #PhoneDataTable .glyphicon-remove, #RepaymentDataTable .glyphicon-edit, #RepaymentDataTable .glyphicon-remove, #OutVisitDataTable .glyphicon-edit, #OutVisitDataTable .glyphicon-remove, #DebtInfoDataTable .glyphicon-edit, #DebtInfoDataTable .glyphicon-remove, #AssetsCluesDataTable .glyphicon-edit, #AssetsCluesDataTable .glyphicon-remove, #ProgrammeDataTable .glyphicon-edit, #ProgrammeDataTable .glyphicon-remove {
+    display: none;
+}
+.litigation-group .litigation-href {
+    margin-right: 10px;
+}
+.litigation-group .litigation-href:last-child {
+    margin-right: 0;
+}
+/*人员花名册*/
+.nav-tabs-header {
+    height: 160px;
+    padding: 30px 30px 30px 70px;
+    box-shadow: 0px 4px 10px 2px rgba(50,108,251,0.1);
+    background: #fff;
+    border-radius: 3px;
+    margin-bottom: 40px;
+}
+.tabs-header-left {
+    float: left;
+    width: 100px;
+    height: 100px;
+    font-size: 18px;
+    font-weight: 700;
+    background: #09958d;
+    margin-right: 30px;
+    border-radius: 100px;
+    text-align: center;
+    line-height: 100px;
+    padding: 0 10px;
+    color: #fffefe;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.tabs-header-right {
+    float: left;
+}
+.header-right-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333333;
+}
+.header-right-txt {
+    font-size: 14px;
+    color: #333333;
+}
+.right-txt-span {
+    padding-right: 30px;
+}
+.tabs-header-center {
+    float: right;
+ }
+.header-center-btn {
+    margin-top: 40px;
+}
+.btn-move, .btn-departure {
+    width: 100px;
+    height: 40px;
+    background: #fff;
+    border: 1px solid #09958d;
+    border-radius: 4px;
+    color: #09958d;
+}
+.tabs-header-center button:active:focus, .tabs-header-center button:focus {
+    outline: none;
+}
+.tabs-header-center button:active {
+    box-shadow: none;
+    font-weight: bold;
+}
+.tabs-header-center button {
+    margin-right: 40px;
+}
+.tabs-header-center button:last-child {
+    margin-right: 0;
+}
+.addtableBg {
+    background-color: #f9f9f9;
+}
+.rowspan-middle {
+    vertical-align: middle !important;
+}
+input[disabled]:hover, input[readonly]:hover, textarea[readonly]:hover,select[disabled]:hover {
+    cursor: auto;
+}
+ input[name="isCover"] {
+     margin-top: 10px;
+ }
+#StartDate {
+    font-size: 14px !important;
+}

@@ -1,0 +1,96 @@
+﻿@using KCSystem.Web.Extensions
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Language" content="zh-CN">
+    <title>表单</title>
+    <link href="@Url.Content("~/Scripts/vendor/fullcalendar/New/fullcalendar.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Scripts/vendor/fullcalendar/New/fullcalendar.print.min.css")" rel="stylesheet" media='print' />
+    <!--moment-->
+    <script src="@Url.Content("~/Scripts/vendor/fullcalendar/New/lib/moment.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/vendor/fullcalendar/New/lib/jquery.min.js")"></script>
+    <!--bootstrap-->
+    <link href="@Url.Content("~/Scripts/vendor/bootstrap/css/bootstrap.min.css")" rel="stylesheet">
+    <script src="@Url.Content("~/Scripts/vendor/bootstrap/js/bootstrap.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/vendor/bootstrap/js/bootstrap-BtnBuilder.js")"></script>
+    <!--bootstrap-datetimepicker-->
+    <link href="@Url.Content("~/Scripts/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css")" rel="stylesheet">
+    <script src="@Url.Content("~/Scripts/vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/vendor/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js")"></script>
+    <!--layer-->
+    <script src="@Url.Content("~/Scripts/vendor/layer/layer.js")"></script>
+    <script src="@Url.Content("~/Scripts/vendor/layer/layer-extends.js")"></script>
+    <!--fx-->
+    <link href="@Url.Content("~/css/fx/fx-list.css")" rel="stylesheet" />
+    <script src="@Url.Content("~/Scripts/util/util.js")"></script>
+
+    <script src="@Url.Content("~/Scripts/vendor/fullcalendar/New/fullcalendar.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/vendor/fullcalendar/New/locale/zh-cn.js")"></script>
+    <style type=text/css>
+        body {
+            padding: 10px;
+        }
+
+        #loading {
+            TOP: 0px;
+            RIGHT: 0px
+        }
+
+        .tooltip {
+            PADDING-BOTTOM: 25px;
+            PADDING-LEFT: 25px;
+            WIDTH: 160px;
+            PADDING-RIGHT: 25px;
+            DISPLAY: none;
+            HEIGHT: 70px;
+            COLOR: #fff;
+            FONT-SIZE: 12px;
+            PADDING-TOP: 25px;
+            z-index: 100
+        }
+
+        .fc-event, .fc-agenda .fc-event-time, .fc-event a {
+            background-color: #3c8dbc; /* background color */
+            border-color: #3c8dbc; /* border color (often same as background-color) */
+            color: yellow; /* text color */
+        }
+
+        .fc-event-container > a {
+            box-shadow: #bcd8e9 5px 2px 10px 3px;
+        }
+
+        .with-errors {
+            color: red;
+            position: fixed;
+            font-size: 10px;
+            padding-top: 0px;
+            margin-top: 0px;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+    </style>
+
+</head>
+<body>
+    <script type="text/javascript">
+        var rootUrl = '@Url.Content("~/")';
+
+    </script>
+
+    @RenderBody()
+
+</body>
+@RenderSection("scripts", required: false)
+</html>
+
+
+
+

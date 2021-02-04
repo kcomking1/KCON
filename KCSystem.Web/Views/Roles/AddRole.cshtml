@@ -1,0 +1,111 @@
+﻿@{
+    Layout = "_Layout_Form";
+    ViewBag.Title = "编辑角色权限";
+    
+}
+<style>
+    td {
+        border: 1px solid gray
+    }
+</style>
+<script src="~/Scripts/vendor/vue/vue.js"></script>
+<script> Vue.config.productionTip=false </script>
+<div id="app" style="padding:15px;padding-right:45px;">
+
+    @using (Html.BeginForm(FormMethod.Post, true, new { @class = "form-horizontal", @role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <table style="border:1px solid gray;width:100%" class="table table-bordered table-hover table-striped">
+            <thead>
+                <tr>
+                    <th style="width:20%">模块</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+            <template v-for="(item,index) in RolePowers" >
+                <tr v-if="index === 0 || item.group != RolePowers[index===0?0:index-1].group" style="color: white;background-color: #09958d;">
+                    <th colspan="2"> {{item.group}}</th>
+                </tr>
+                <tr :key="index">
+                    <td>
+                        {{item.key}}
+                        <input type='checkbox' :checked="item.checked" :name="item.key" @@change="SetRole(item)"/>
+                    </td>
+                    <td style="text-align: left">
+                        <span v-for="(item1,index1) in item.actions" :key="index1">
+                            <input type='checkbox' :name="item.key" @@change="SetRole(item1)" :checked="item1.checked?'checked':''"/>
+                            {{item1.action}}
+                        </span>
+
+                    </td>
+                </tr>
+            </template>
+            </tbody>
+        </table>
+    }
+
+</div>
+<script> 
+    var app = new Vue({
+        el: '#app',
+        data() {
+            return {
+                RolePowers: @Html.Raw(ViewBag.Resouces)
+            };
+        },
+        methods:{
+            SetRole:function(item) {
+                item.checked = !item.checked;
+                
+                if (item.actions) {
+                    item.actions.forEach(function (action) {
+                        action.checked = item.checked;
+                    });
+                }
+            }
+        },
+        computed: {
+            // 计算属性的 getter
+            OwnedPowers: function () {
+                var roles = [];
+                this.RolePowers.forEach(function (item) {
+                    item.actions.forEach(function (action) {
+                        if (action.checked) {
+                            roles.push(action);
+                        }
+                    });
+                });
+                return roles;
+            }
+        }
+
+    });
+
+    function submitForm() {
+        let roles = app.OwnedPowers;
+        
+        $.ajax({
+            url: '@Url.Action("AddRole")', 
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(roles),
+            success: function(data) {
+                if (data.result) {
+                    layer.alert("保存成功");
+                    window.parent.layer.closeAll();
+                } else {
+                    layer.alert(data.msg);
+                }
+            },
+            error: function(e) {
+
+                layer.alert("系统异常，请稍候重试！");
+            }
+        });
+
+    }
+    
+</script>
+

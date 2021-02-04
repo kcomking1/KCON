@@ -1,0 +1,35 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+/*字体*/
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.navbar-nav > .user-menu > .dropdown-menu {
+    width: 104.69px !important;
+    min-width: 104.69px !important;
+}
+.navbar-nav > .user-menu:hover {
+    background: #3c8dbc !important;
+    color: #fff !important;
+}
+#changePwd, #logout,#personCenter {
+    width: 100%;
+}
+
+.user-ul li {
+    text-align: center;
+    color: rgba(0,0,0,.65);
+}
+.user-ul li>div{
+    padding:10px;
+}
+    .user-ul li:hover {
+        cursor: pointer;
+        background-color: #3c8dbc;
+        color: #fff;
+    }
+
+ 

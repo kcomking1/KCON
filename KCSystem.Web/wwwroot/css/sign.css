@@ -1,0 +1,458 @@
+﻿html {
+    height: 100%
+}
+body{
+    height:100%;
+}
+body.signin {
+    height: auto;
+    background: url(../images/login-background.jpg) no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: rgba(255,255,255,.95)
+}
+
+.signinpanel {
+    width: 100%;
+    height: 100%;
+    /*min-height: 101%;*/
+    background: linear-gradient(#3a8bef,#143a9b);
+    position: relative;
+}
+
+.signinpanel .logopanel {
+    float: none;
+    width: auto;
+    padding: 0;
+    background: 0 0
+}
+
+.signinpanel .signin-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0
+}
+
+.signinpanel .form-control {
+    display: block;
+    height: 40px;
+    border-radius: 4px !important;
+}
+.input-user {
+    padding: 11px 12px;
+}
+.checkbox-top {
+    margin-top: 29px !important;
+}
+.input_line {
+    position: absolute;
+    top: 9px;
+    left: 17px;
+    width: 20px;
+    height: 20px;
+    border-right: 1px solid #999;
+    z-index: 10;
+}
+.unmae {
+    background: #fff url(../images/user.png) no-repeat 95% center
+}
+
+.pword {
+    background: #fff url(../images/locked.png) no-repeat 95% center
+}
+
+.signinpanel .btn {
+    margin-top: 15px
+}
+.icon_user, .icon_pas {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 10;
+}
+.icon_user {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url(../Images/icon_01.png) no-repeat;
+    background-size: cover;
+    
+}
+.icon_pas {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url(../Images/icon_02.png) no-repeat;
+    background-size: cover;
+}
+/*.signinpanel form {
+    background: rgba(255,255,255,.2);
+    border: 1px solid rgba(255,255,255,.3);
+    -moz-box-shadow: 0 3px 0 rgba(12,12,12,.03);
+    -webkit-box-shadow: 0 3px 0 rgba(12,12,12,.03);
+    box-shadow: 0 3px 0 rgba(12,12,12,.03);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    padding: 30px
+}*/
+.signup-footer {
+    border-top: solid 1px rgba(255,255,255,.3);
+    margin: 20px 0;
+    padding-top: 15px
+}
+
+/*@media screen and (max-width:768px) {
+    .signinpanel, .signuppanel {
+        margin: 0 auto;
+        width: 420px !important;
+        padding: 20px
+    }
+
+        .signinpanel form {
+            margin-top: 20px
+        }
+
+        .signup-footer, .signuppanel .form-control {
+            margin-bottom: 10px
+        }
+
+            .signup-footer .pull-left, .signup-footer .pull-right {
+                float: none !important;
+                text-align: center
+            }
+
+        .signinpanel .signin-info ul {
+            display: none
+        }
+}*/
+
+/*@media screen and (max-width:320px) {
+    .signinpanel, .signuppanel {
+        margin: 0 20px;
+        width: auto
+    }
+}*/
+.sigin_top {
+    padding: 0 20px;
+    margin-bottom: 110px;
+    background-color: #62a8ea;
+    color: #fff;
+    font-size: 18px;
+    height: 100px;
+    width: 100%;
+    line-height: 100px;
+}
+
+.sigin_top img {
+    height: 70px;
+    vertical-align: middle;
+    margin-right: 16px;
+}
+.signin-content {
+    /*width: 1280px;*/
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%); /* IE 9 */
+    -moz-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+.sign-left-bg {
+   /* float: left;*/
+   /* width: 700px;*/
+   /* height: 600px;*/
+    height: 100%;
+    background: url(../Images/sign_bg.png) no-repeat;
+    background-size: 100% 100%;
+    /*margin-right: 180px;*/
+    margin-right: 10%;
+}
+.login_form {
+    /*float: right;*/
+    /*width: 400px;*/
+    /*height: 490px;*/
+    margin: 0 auto;
+    padding: 20px 60px;
+    background: #fff;
+    border-radius: 10px;
+}
+.footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.globalFooter{
+    padding: 0 16px 20px;
+    margin: 48px 0 24px;
+    text-align: center;
+}
+.globalFooter .copyright{
+    color: #fff;
+    font-size: 14px;
+}
+.signinpanel .input-group .form-username, .signinpanel .input-group .form-password {
+    height: 40px;
+    padding-left: 47px !important;
+}
+#submitbtn {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 22px;
+    font-size: 16px !important;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border-color: #09958D;
+}
+#submitbtn:focus {
+    border-color: transparent;
+    outline: 0px auto -webkit-focus-ring-color;
+}
+#submitbtn:hover {
+    font-weight: bold;
+}
+.login_logo {
+   /* width: 273px;*/
+    height: 33px;
+    background: url(../Images/logo_login.png) no-repeat;
+    background-size: 100% 100%;
+    margin: 60px auto 60px;
+}
+.sign-tab {
+    margin: 0;
+    padding: 0 60px;
+    list-style: none;
+    margin-bottom: 24px;
+}
+.btn-bg {
+    background: #09958D !important;
+}
+.sign-tab li {
+    /*float: left;*/
+    width: 100%;
+    height: 36px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: 2px solid transparent;
+    margin-right: 20%;
+}
+
+.sign-tab li:last-child {
+    margin-right:0;
+}
+.sign-tab li:hover {
+    cursor: pointer;
+}
+.sign-tab li.active-tab {
+    color: #1890ff;
+    border-bottom: 2px solid #1890ff;
+}
+.other {
+    text-align: left;
+    line-height: 22px;
+}
+.other a {
+    color: #1890ff;
+    text-decoration: none;
+}
+.other .register{
+   margin-right: 20px;
+ }
+.sign-link a {
+    color: #1890ff;
+    text-decoration: none;
+}
+.sign-line {
+    margin-bottom: 40px;
+    margin-top: 24px;
+}
+.input-error {
+    position: absolute !important;
+    left: 0;
+    top: 42px;
+}
+/*.input-error-user {
+    bottom: -37px;
+}*/
+.input-padding {
+    background-color: #fff !important;
+}
+/*注册账号*/
+.main-reg {
+    width: 428px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 10px #eff2f3;
+    box-shadow: 0 0 10px #eff2f3;
+}
+.reg-control, .reg-code,.reg-pwd {
+    position: relative;
+}
+.msg-phone, .msg-code,.msg-pwd {
+    display: none;
+    position: absolute;
+    bottom: -19px;
+    left: 0;
+}
+.reg-model:focus{
+   text-decoration:none;
+}
+.main-reg .submit-reg {
+    width: 100%;
+}
+.main-reg .to-login {
+    display: block;
+    text-align: center;
+    line-height: 40px;
+}
+/*密码安全提示*/
+.warning___1mxFE {
+    color: #faad14;
+}
+.progress-pass___2jaF3 > .progress___39kYU .ant-progress-bg {
+    background-color: #faad14;
+}
+.reg-pwd-content{
+    position:relative;
+}
+.main-reg h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+/*问题*/
+/*.problem-content {
+    width: 800px;
+    margin: 0 auto;
+    padding: 15px 30px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 10px #eff2f3;
+    box-shadow: 0 0 10px #eff2f3;
+}*/
+.problem-content h3 {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+/*忘记密码*/
+.main___3ckMm {
+    width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 10px #eff2f3;
+    box-shadow: 0 0 10px #eff2f3;
+}
+.rp-phone-content{
+    position:relative;
+}
+.rp-phone {
+    display: none;
+    position:absolute;
+    bottom:-19px;
+    left:0;
+}
+.main___3ckMm .getCode {
+    display: block;
+    width: 100%;
+    margin-top: 3px;
+}
+.rp-code-content, .rp-setpwd-content, .rp-newpwd-content {
+    position: relative;
+}
+.rp-code, .rp-setpwd,.rp-newpwd {
+    display: none;
+    position: absolute;
+    bottom: -19px;
+    left: 0;
+}
+.rp-success {
+    text-align: center;
+    margin-left: 50%;
+}
+/*仲裁入口*/
+.internal-main {
+    width: 468px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 10px #eff2f3;
+    box-shadow: 0 0 10px #eff2f3;
+}
+.internal-main .submit-in {
+    width: 100%;
+}
+.internal-main .internal-tocode {
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+}
+.in-pwd-content, .email-control, .email-code-content {
+    position: relative;
+}
+.in-pwd, .msg-email, .msg-email-code {
+    display: none;
+    position: absolute;
+    bottom: -19px;
+    left: 0;
+}
+#signature {
+    width: 408px;
+    height: 188px;
+    background:rgba(24,144,255,.1);
+    display: none;
+    margin-top:10px;
+}
+
+#signature p {
+    background: rgba(24,144,255,.5);
+}
+/*角色*/
+.main-choice {
+    width: 568px;
+    margin: 0 auto;
+    text-align: center;
+    color: rgba(0,0,0,.65);
+}
+
+.main-choice .content-choice {
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.headerImg {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 0 0 15px;
+}
+/*登录页面*/
+.form-control:focus {
+    border-color: #054d49;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(215,250,248, .6) !important;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(215,250,248, .6) !important;
+}
+
+/*适配*/
+@media screen and (max-width:768px) {
+    .signin-content{ top: 60%;}
+    .login_logo {
+        height: 26px;
+        margin: 20px auto 30px;
+    }
+}

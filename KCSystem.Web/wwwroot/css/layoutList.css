@@ -1,0 +1,314 @@
+﻿.clearfix:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0;
+}
+
+.clearfix {
+    zoom: 1;
+}
+body{overflow-y: hidden !important}
+/*公共部分*/
+.select2-container--default .select2-selection--single, .select2-selection .select2-selection--single {
+    border: 1px solid #d2d6de;
+    border-radius: 4px !important;
+    /* padding: 6px 12px; */
+    /* height: 34px; */
+    height: 30px;
+    padding: 5px 10px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    margin-top: -2px !important; 
+}
+.table thead {
+    background: #f7f7f7;
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: #D7FAF8 !important;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #fff;
+}
+
+.table-striped > tbody > tr:nth-of-type(even) {
+    background-color: #f9f9f9
+}
+
+#searchForm .form-group {
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+    #searchForm .form-group label {
+        margin-right: 5px;
+    }
+
+#toobar {
+    margin: 20px 0 20px;
+}
+
+    #toobar .toobar-txt {
+        float: left;
+        font-size: 15px;
+        font-weight: bold;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    #toobar .toobar-btn {
+        float: right;
+    }
+
+ 
+     
+.litigation-group {
+    padding-left:20px
+}
+.litigation-group .litigation-href {
+        margin-right: 10px;
+        display: inline-block; 
+}
+
+.litigation-group .litigation-href:last-child {
+    margin-right: 0px;
+}
+#dataTable tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9
+}
+a:hover, a:active, a:focus {
+    font-weight: bold;
+}
+
+ 
+
+.layui-layer-iframe .layui-layer-btn, .layui-layer-page .layui-layer-btn {
+   
+    text-align: center;
+}
+/*文档管理图标*/
+#tree .list-group .glyphicon-plus, #tree .list-group .glyphicon-minus {
+    color: #09958d;
+}
+#tree .list-group .node-selected {
+    background: #D7FAF8 !important;
+    color: #333 !important;
+}
+#tree .list-group .node-tree:not(.node-disabled):hover {
+    background-color: #D7FAF8;
+}
+
+/*时间空间颜色*/
+
+.datetimepicker table tr td.active, .datetimepicker table tr td.active:hover, .datetimepicker table tr td.active.disabled, .datetimepicker table tr td.active.disabled:hover {
+    background-color: #09958d;
+    background-image: -moz-linear-gradient(top,#23c3ba,#09958d);
+    background-image: -ms-linear-gradient(top,#23c3ba,#09958d);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#23c3ba),to(#09958d));
+    background-image: -webkit-linear-gradient(top,#23c3ba,#09958d);
+    background-image: -o-linear-gradient(to bottom,#23c3ba,#09958d);
+    background-image: linear-gradient(to bottom,#23c3ba,#09958d);
+    border-color: #09958d;
+}
+
+.btn:focus {
+    color: #09958d;
+}
+.btn:active {
+    box-shadow: none !important;
+}
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+    outline: 0px auto -webkit-focus-ring-color !important;
+}
+#btnSearch:focus, #btnReflash:focus, .btnSearch:focus, .btnReflash:focus {
+    color: #fff;
+    border-color: transparent;
+}
+/*户籍*/
+.distpicker {
+    display: inline-block;
+}
+.distpicker .city-picker-span {
+    display: inline-block;
+    /*width: 100% !important;
+    min-width: 170px;*/
+    width: 130px !important;
+    height: 30px !important;
+    line-height: 30px !important;
+    border-radius: 4px;
+    padding-right: 20px;
+    border: 1px solid #d2d6de;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.distpicker .city-picker-span.focus, .city-picker-span.open {
+    border-bottom-color: #d2d6de;
+}
+.distpicker .city-select-tab > a.active {
+    color: #09958d;
+}
+.distpicker .city-select a:hover, .city-select a:focus {
+    background-color: #D7FAF8;
+    color: #09958d;
+}
+.distpicker .city-select a.active {
+    background-color: #D7FAF8;
+    color: #09958d;
+}
+#provinceReset {
+    /*background: #09958d !important;*/
+    border-radius: 4px !important;
+    padding: 5px 17px !important;
+}
+.fx-wrapper #provinceReset:focus{
+    color: #fff;
+    border-color: transparent;
+}
+ 
+/*表格去bg*/
+/*#dataTable tbody tr.detail-view td {
+    padding-left: 30px;
+}*/
+#dataTable tbody tr.detail-view {
+    background-color: #fff !important;
+}
+#dataTable tbody tr.detail-view:hover {
+    background-color: #fff !important;
+}
+/*.bootstrap-table .fixed-table-container.fixed-height:not(.has-footer) {
+     border-bottom: 0;
+}*/
+.bootstrap-table .fixed-table-container.fixed-height .fixed-table-border {
+    border-left: 0;
+    border-right: 0;
+}
+/*请收案件客户分类*/
+.customer-group .select2-container {
+    width: auto !important;
+    min-width: 130px;
+}
+.customer-group .select2-dropdown .select2-search__field:focus, .select2-search--inline .select2-search__field:focus {
+    border: 1px solid transparent;
+}
+
+.customer-group .select2-container--default .select2-selection--multiple {
+    border-radius: 4px !important;
+    height: 30px;
+    min-height: 31px;
+}
+
+.customer-group .select2-container--default .select2-selection--multiple:focus {
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+    }
+
+.customer-group .select2-container--default .select2-selection--multiple .select2-selection__clear {
+        margin-top: 7px;
+    }
+
+.customer-group .select2-dropdown .select2-search__field:focus, .select2-search--inline .select2-search__field:focus {
+    border: 0;
+}
+
+.customer-group .select2-container--default .select2-selection--multiple .select2-selection__rendered {
+    padding: 0px 0px;
+    margin-top: -2px;
+}
+
+.customer-group .select2-container .select2-search--inline .select2-search__field {
+    padding: 0px 10px 0 10px;
+    min-height: 24px;
+}
+/*人员名册*/
+.fx-line {
+    margin-bottom: 35px;
+}
+.person-content {
+    min-width: 200px;
+    margin-bottom: 5px;
+}
+.person-box {
+    width: 100%;
+    height: 80px;
+    background: #d7faf8;
+    border-radius: 4px;
+    line-height: 80px;
+    text-align: center;
+    user-select: none
+}
+    .person-box:hover {
+        cursor: pointer;
+        background: #a7faf8;
+    }
+.person-box-last {
+    background: #f2f2f2;
+    color: #666666;
+    width: 100%;
+    height: 80px; 
+    border-radius: 4px;
+    line-height: 80px;
+    text-align: center;
+    user-select: none
+}
+    .person-box-last:hover {
+        cursor: pointer;
+        background: #d4d8d8;
+    }
+.person-txt {
+    color: #09958d;
+    font-size: 16px;
+}
+
+.person-txt .person-num {
+    font-style: inherit;
+    font-weight: 700;
+    font-size: 24px;
+    padding: 0 10px;
+}
+.person-txt .person-ren {
+    font-style: inherit;
+    font-weight: 700;
+}
+.person-box-last .person-txt {
+    color: #666666;
+}
+#btnCaseEnd {
+    border-radius: 4px !important;
+    padding: 5px 17px !important;
+}
+#btnCaseEnd:focus {
+    color: #fff;
+    border-color: transparent;
+}
+#searchForm {
+    position: relative;
+}
+.btn-content button {
+    margin-right: 4px;
+}
+.btn-content button:last-child {
+    margin-right: 0;
+}
+.btn-content button:hover {
+    color: #fff;
+    border-color: transparent;
+}
+.btn-content {
+    position: absolute;
+    right: 0;
+}
+#keyword, .tel-info, .fx-wrapper .form-inline input[type="text"] {
+    font-size: 14px;
+    max-width: 130px;
+}
+#StartDate, #EndDate {
+    font-size: 14px;
+}
+.fixed-table-toolbar {
+    position: absolute;
+    top: 107px;
+    right: 30px;
+}

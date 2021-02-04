@@ -1,0 +1,16 @@
+﻿@model object
+
+@{
+    ViewBag.Title = "Access Denied";
+    Layout = "_Layout_Form";
+}
+
+<h2 style="text-align: center">无权限访问</h2>
+<div align="center" style="margin: 0px auto" onclick="ToAction()">请重新登录</div>
+<script src="~/Scripts/vendor/jQuery/jquery-2.2.3.min.js"></script>
+<script>
+    function ToAction() {
+        parent.parent.location.href = "/signin";
+    }
+    
+</script>

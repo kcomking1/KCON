@@ -1,0 +1,218 @@
+﻿
+
+@{
+    ViewBag.Title = "角色管理";
+    Layout = "_Layout_List";
+}
+
+    <div class="fx-content">
+
+        <div class="fx-wrapper">
+            <form class="form-inline" id="searchForm">
+                <div class="form-group">
+                    <input type="text" class="form-control input-sm" name="keyword" placeholder="角色名称">
+
+                </div>
+                <div class="form-group">
+                    <button type="button" class="btn btn-primary btn-sm" id="btnSearch">
+                        @*<i class="glyphicon glyphicon-search"></i>*@
+                        查询
+                    </button>
+                    <button type="button" class="btn btn-danger btn-sm" id="btnReflash">
+                        @*<span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>*@
+                        刷新
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div id="toobar" class="clearfix">
+            <div class="toobar-txt">角色列表</div>
+            <div class="btn-group btn-group-sm toobar-btn">
+                @if (User.HasClaim("角色管理", "编辑"))
+                {
+                    <button onclick="openForm('', '添加角色数据');" type="button" class="btn btn-primary btn-sm" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        添加
+                    </button>
+                }
+
+
+            </div>
+        </div>
+        <div class="fx-wrapper table-bodys">
+            <table id="dataTable" class="table-bordered"></table>
+        </div>
+    </div>
+
+<script>
+    var $table = $('#dataTable');
+    $(function () {
+        initTable();
+    });
+
+    //初始化表格
+    function initTable() {
+        $table.bootstrapTable({
+            url: '@Url.Action("RoleModuleList")',
+            idField: 'id',
+            pagination: true,
+            method: 'post',
+            height: tableHeight,
+            clickToSelect: false,
+            sidePagination: "server",
+            detailView: false, //父子表
+            pageNumber: 1,
+            pageSize: 50,
+            pageList: [50, 100],
+            columns: [
+                
+                { title: '编号', field: 'id', width: '38' },
+                { title: '角色名', field: 'name', width: '150' },
+                { title: '父级', field: 'parentName', width: '150' },
+                { title: '备注', field: 'remark', width: '300' },
+                {
+                    title: '添加时间',
+                    field: 'addTime',
+                    width: '120',
+                    formatter: function(value, row) {
+                        return new Date(value).format("yyyy年MM月dd日");
+                    }
+                },
+                {
+                    title: '操作',
+                    field: '_',
+                    width: '150px',
+                    formatter: function(value, row) {
+                        var builder = new BtnBuilder();
+                        @if (User.HasClaim("角色管理", "查看"))
+                        {
+                            <text>
+                                builder.AddBtn({
+                                    name: "编辑",
+                                    icon: 'glyphicon-ok-circle',
+                                    function: 'openForm',
+                                    param: [row["id"], "编辑角色信息"]
+                                });
+                            </text>
+                        }
+
+                        @if (User.HasClaim("角色管理", "编辑权限"))
+                        {
+                            <text>
+                                builder.AddBtn({
+                                    name: "权限",
+                                    icon: 'glyphicon-ok-circle',
+                                    function: 'openRoleForm',
+                                    param: [row["id"], row["name"], "编辑角色权限信息"]
+                                });
+                            </text>
+                        }
+                        @if (@User.HasClaim("角色管理", "删除"))
+                        {
+                            <text>
+                                builder.AddBtn({
+                                    name: "删除",
+                                    icon: 'glyphicon-trash',
+                                    function: 'deleteData',
+                                    param: [row['id']]
+                                });
+                            </text>
+                        }
+                        return builder.build();
+                    }
+                }
+            ],
+            onExpandRow: function(index, row, $detail) {
+
+
+            },
+            queryParams: function(params) {
+                var searchParams = $('#searchForm').getValues();
+                $.extend(params, searchParams);
+
+                return params;
+            }
+        });
+    }
+
+    //绑定事件
+    function bindEvent() {
+
+    }
+
+    //删除数据
+    function deleteData(id) {
+        dialogComfirm('确认删除吗？',
+            function() {
+                var ids = [];
+
+                if (typeof (id) == 'string') { //单条数据
+                    ids.push(id);
+                } else { //多条数据
+                    var rows = $table.bootstrapTable('getSelections');
+                    if (rows.length === 0) {
+                        dialogError('请选择需要删除的数据！');
+                        return;
+                    } else {
+                        $.each(rows,
+                            function(index, value) {
+                                ids.push(value['id']);
+                            });
+                    }
+                }
+
+                loading();
+                $.getJSON('@Url.Action("DeleteData")', { ids: JSON.stringify(ids) }, function (resJson) {
+                loading(false);
+
+                if (resJson.success) {
+                    $table.bootstrapTable('refresh');
+                    dialogSuccess('删除成功!');
+                }
+                else {
+                    dialogError(resJson.msg);
+                }
+            });
+        });
+    }
+    //打开表单
+    function openForm(id, title) {
+        var str = '添加';
+        if (id > 0) {
+            str = '修改';
+        }
+        dialogOpen({
+            id: 'form',
+            title: title,
+            width: '768px',
+            height: '550px',
+            btn: [str, '取消'],
+            url: '@Url.Action("Add")/{0}'.format(id || ''),
+            yes: function (window, body) {
+                window.submitForm();
+            },
+            end: function() {
+                $table.bootstrapTable('refresh');
+            }
+        });
+    } 
+    //打开表单
+    function openRoleForm(id,name, title) {
+        
+        dialogOpen({
+            id: 'form',
+            title: title+"-"+name,
+            width: '70%',
+            height: '70%',
+            btn: ["保存", '取消'],
+            url: '@Url.Action("AddRole")/{0}'.format(id || ''),
+            yes: function (window, body) {
+                window.submitForm();
+            },
+            end: function() {
+               // $table.bootstrapTable('refresh');
+            }
+        });
+    } 
+</script>
+

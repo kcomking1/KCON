@@ -1,0 +1,181 @@
+﻿@model LoginViewModel
+@{
+    ViewBag.Title = "title";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        if (window.parent !== this.window) {
+            if (window.parent.parent !== this.window.parent) {
+                parent.parent.window.location.reload(true); 
+            }
+            parent.window.location.reload(true);
+        }
+        
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>资管系统</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link href="~/Scripts/vendor/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/vendor/jQuery/jquery-2.2.3.min.js"></script>
+    <link href="~/css/sign.css" rel="stylesheet" />
+
+    <script src="~/Scripts/vendor/jqueryvali/jquery.validate.min.js"></script>
+    <script src="~/Scripts/vendor/jqueryvali/additional-methods.min.js"></script>
+    <script src="~/Scripts/vendor/jqueryvali/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/vendor/jqueryvali/messages_zh.min.js"></script>
+    <script src="~/Scripts/vendor/layer/layer.js"></script>
+    <style type="text/css">
+
+        html {
+            overflow: hidden;
+        }
+
+        .with-errors {
+            color: red;
+            position: fixed;
+            font-size: 10px;
+            padding-top: 0px;
+            margin-top: 0px;
+        }
+
+        .sign-saoma {
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+    </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="~/Scripts/vendor/ie9/html5shiv.min.js"></script>
+        <script src="~/Scripts/vendor/ie9/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+ 
+    <div class="signinpanel" style="        color: whitesmoke;background: url(/login.jpg);
+">
+        @*<div class="row">
+            <div class="col-sm-12">
+                <div class="sigin_top">
+                    <img src="~/sign_logo.png" alt="logo">
+                </div>
+            </div>
+        </div>*@
+        <div class="row">
+            <div class="signin-content clearfix col-md-10 col-sm-10 col-xs-10">
+                <div class="sign-left-bg col-md-5 col-md-offset-1 hidden-xs hidden-sm"></div>
+                <form asp-action="Signin" method="post" style="color: #666;" class="login_form col-md-3 col-xs-12 col-sm-12" id="signinForm">
+                    <div class="login_logo">logo</div>
+                    <div class="sign-content">
+                        <div class="sign-form">
+                            <div class="input-group" style="margin-bottom: 37px;width: 100%">
+                                <i class="icon_user"></i>
+                                <span class="input_line"></span>
+                                <input asp-for="UserName" placeholder="用户名" class="form-control form-username"/>
+                                <span asp-validation-for="UserName" class="with-errors input-error input-error-user"></span>
+                            </div>
+                            <div class="input-group" style="width: 100%">
+                                <i class="icon_pas"></i>
+                                <span class="input_line"></span>
+                                <input asp-for="Password" type="text" placeholder="密  码" class="form-control form-password" onfocus="this.type='password'" autocomplete="off"/>
+                                <span asp-validation-for="Password" class="with-errors input-error"></span>
+                            </div>
+                            @*<div asp-validation-summary="ModelOnly" class="text-danger"></div>*@
+                            <div class="checkbox checkbox-top">
+                                <label>
+                                    <input type="checkbox" class="remb_me"> 记住账号
+                                </label>
+                            </div>
+                            <div class="sign-line">
+                                <div class="other">
+                                    
+                                </div>
+                            </div>
+                            <button class="btn btn-primary btn-lg btn-bg" type="submit" id="submitbtn">登录</button>
+                        </div>
+                         
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="globalFooter footer">
+            <div class="copyright">
+                <div class="login_time"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function isIE() { //ie?
+        if (!!window.ActiveXObject || "ActiveXObject" in window) {
+            layer.open({
+                type: 2,
+                title:false,
+                area: ['540px', '300px'],
+                scrollbar: false,
+                content: '/dontsupport.html'
+            });
+        }
+    }
+    $(document).ready(function() {
+        isIE();
+    
+        //$(".sign-tab li").on("click", function () {
+        //    var that = this;
+        //    $(that).addClass("active-tab").siblings().removeClass("active-tab");
+        //    $(".sign-form").eq($(that).index()).show().siblings().hide();
+        //})
+        //失去焦点
+
+        $(".form-username,.form-password").on("blur",
+            function() {
+                window.scroll(0, 0);
+            });
+
+        //判断是否保存用户名
+        var storage = window.sessionStorage;
+        $(".remb_me").click(function(event, scope) {
+            event.stopPropagation();
+            if ($(this).is(":checked")) {
+                $(this).prop("checked", true);
+                //storage["loginname"] = $(".form-username").val();
+                //storage["isstorename"] =  "yes";
+            } else {
+                $(this).prop("checked", false);
+                //storage["loginname"] = "";
+                //storage["isstorename"] =  "no";
+            }
+        })
+
+        $("#signinForm").submit(function () {
+            if ($(".remb_me").prop("checked") == true) {
+                storage["loginname"] = $(".form-username").val();
+                storage["isstorename"] = "yes";
+            } else {
+                storage["loginname"] = "";
+                storage["isstorename"] = "no";
+            }
+        })
+
+        //判断是否存在过用户
+        if ("yes" == storage["isstorename"]) {
+            $(".remb_me").prop("checked", true);
+            $(".form-username").val(storage["loginname"]);
+        }
+        
+
+        var myDate = new Date();
+        var tYear = myDate.getFullYear();
+        $(".copyright .login_time").html("© " + tYear + " - 资管系统");
+    })
+</script>
+

@@ -1,0 +1,94 @@
+﻿@model KCSystem.Core.Entities.BackEnum
+@{
+    Layout = "_Layout_Form";
+    ViewBag.Title = "添加新字典";
+
+}
+
+<div id="app" style="padding:15px;padding-right:45px;">
+    @using (Html.BeginForm(FormMethod.Post, true, new { @class = "form-horizontal", @role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal new-add">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @if (Model == null)
+            {
+                <input type="hidden" value="0" name="id">
+            }
+            else
+            {
+                <input type="hidden" value="@Model.Id" name="id">
+            }
+            <div class="form-group">
+                <label class="col-sm-2 control-label">字典名称</label>
+                <div class="col-sm-10">
+                    @Html.EditorFor(model => model.EnumName, new { htmlAttributes = new { @class = "form-control", @placeholder = "请输入字典名称" } })
+                    @Html.ValidationMessageFor(model => model.EnumName, "", new { @class = "help-block with-errors" })
+                </div>
+            </div>
+             
+            <div class="form-group">
+                <label class="col-sm-2 control-label">排序</label>
+                <div class="col-sm-10">
+                    @Html.EditorFor(model => model.Sort, new { htmlAttributes = new { @class = "form-control", @placeholder = "请输入排序" } })
+                    @Html.ValidationMessageFor(model => model.Sort, "", new { @class = "help-block with-errors" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">备注</label>
+                <div class="col-sm-10">
+                    @Html.EditorFor(model => model.Remark, new { htmlAttributes = new { @class = "form-control", @placeholder = "请输入备注" } })
+                    @Html.ValidationMessageFor(model => model.Remark, "", new { @class = "help-block with-errors" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">所属上级:</label>
+                <div class="col-sm-10">
+                    <select id="ParentId" name="ParentId" class=" form-control" data-style="btn-default btn-sm">
+                        @if (Model?.ParentId != null)
+                        {
+                            <option value="@Model.ParentId" selected="selected">@Model.Parent.EnumName</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-offset-2 col-sm-10">
+                    <input type="submit" value="保存" id="submit" class="hidden" />
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+
+<script>
+
+    $("#ParentId").select2({
+            width: "100%", ajax: {
+                delay: 250,
+                url: '@Url.Action("GetParents")',
+                data: function(params) {
+
+                    var query = {
+                        search: params.term,
+                        type: 'public'
+                    }
+                    return query;
+                }
+            },
+            placeholder: '请选择', //默认文字提示
+            language: "zh-CN",
+            allowClear: true, //允许清空
+            escapeMarkup: function(markup) { return markup; }, // 自定义格式化防止xss注入
+            minimumInputLength: 2 //最少输入多少个字符后开始查询
+        },
+        true);
+    function submitForm() {
+
+        $('#submit').trigger('click');
+
+    }
+</script>
+@Html.Raw(ViewBag.JS)
