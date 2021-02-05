@@ -66,6 +66,15 @@ namespace KCSystem.Infrastructrue.Database
                                 ModuleDesc= "角色管理",
                                 ModuleUse = true,
                                 Icon=""
+                            },
+                            new Module()
+                            {
+                                ModuleName="字典管理",
+                                ModuleUrl="/BackEnums",
+                                ModuleSortIndex=4,
+                                ModuleDesc= "字典管理",
+                                ModuleUse = true,
+                                Icon=""
                             }
                         }
                     };

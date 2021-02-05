@@ -8,6 +8,13 @@
     <Platforms>AnyCPU;x64</Platforms>
     <UserSecretsId>8b36527d-5710-45e5-9334-66e577f6711c</UserSecretsId> 
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="logs\**" />
+    <Content Remove="logs\**" />
+    <EmbeddedResource Remove="logs\**" />
+    <None Remove="logs\**" />
+  </ItemGroup>
  
 
   <ItemGroup>
@@ -45,7 +52,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="logs\" />
     <Folder Include="QueryParams\" />
   </ItemGroup>
 
